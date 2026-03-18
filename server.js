@@ -34,7 +34,7 @@ app.post('/api/get-ticket', (req, res) => {
     res.status(201).json({
       success: true,
       message: 'Data received successfully',
-      receivedData: req.body
+      data: req.body
     });
   } catch (error) {
     res.status(500).json({
@@ -95,7 +95,7 @@ app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
   console.log('Available endpoints:');
   console.log(`  GET  http://localhost:${PORT}/`);
-  console.log(`  POST http://localhost:${PORT}/api/data`);
+  console.log(`  POST http://localhost:${PORT}/api/get-ticket`);
   console.log(`  POST http://localhost:${PORT}/webhook/freshdesk`);
   console.log(`  POST http://localhost:${PORT}/api/custom`);
 });
